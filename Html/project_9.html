@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Services Operations</title>
+    <link rel="stylesheet" href="../css/project_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Security Services Operations (SSO)</h1>
+            <p>Automating SWIFT message processing using machine learning (ML) and advanced classification algorithms to enhance efficiency and accuracy in financial operations.</p>
+        </header>
+
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>The SWIFT network is a global provider of secure financial messaging services, handling thousands of financial messages daily. 
+               This project focuses on automating the classification and extraction of key information from these messages using machine learning techniques. 
+               By leveraging advanced algorithms, we aim to reduce manual intervention, minimize errors, and improve processing speed.</p>
+        </section>
+
+        <section id="achievements">
+            <h2>Key Achievements</h2>
+            <ul>
+                <li><strong>Automated Classification:</strong> Successfully developed a system that classifies SWIFT messages into 12 distinct categories, reducing the need for manual sorting.</li>
+                <li><strong>Entity Extraction:</strong> Implemented machine learning models to extract 23 key entities from messages, such as transaction amounts, dates, and beneficiary details.</li>
+                <li><strong>Efficiency Gains:</strong> Achieved operational efficiency gains equivalent to 23 Full-Time Equivalents (FTEs), allowing better resource allocation.</li>
+            </ul>
+        </section>
+
+        <section id="technology">
+            <h2>Technology Stack</h2>
+            <ul>
+                <li><strong>Programming Language:</strong> Python – chosen for its powerful ML libraries and ease of implementation.</li>
+                <li><strong>Machine Learning Algorithms:</strong> Random Forest – used for high accuracy in message classification.</li>
+                <li><strong>Natural Language Processing (NLP):</strong> Applied for text analysis and extraction within SWIFT messages.</li>
+                <li><strong>DevOps Tools:</strong> Azure DevOps – integrated for smooth CI/CD and efficient deployment.</li>
+            </ul>
+        </section>
+
+        <section class="download-section">
+            <h2>Project Documentation</h2>
+            <p>Download the detailed project report for insights into implementation and results.</p>
+            <button id="download-btn">Download Report</button>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Security Services Operations. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function () {
+            const fileUrl = "../projects/Security Services Operations.pdf";
+            const fileName = "SSO_Project_Report.pdf";
+
+            const a = document.createElement("a");
+            a.href = fileUrl;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+</body>
+</html>
