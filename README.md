@@ -1,76 +1,134 @@
+# Professional AI/ML Portfolio - Ganesh Jagadeesan
+
+AI/ML Architect with MBA and Pursuing DBA at Great Lakes Institute of Management
+
+Live Portfolio: https://ganlak.github.io/Portfolio-Project/
+
+## About
+
+Enterprise AI/ML Architect with 19+ years of experience building production-grade AI systems delivering $1M+ ROI across Healthcare, Banking, Cybersecurity, and Enterprise domains.
+
+## Highlights
+
+- $1M+ ROI Delivered across Fortune 500 companies
+- 19+ Years of enterprise AI/ML experience
+- 12 Production Systems with proven business impact
+- 70-80% Efficiency Gains in automated processes
+- MBA and Pursuing DBA at Great Lakes Institute of Management
+
+## Featured Projects
+
+### Medical Coding System
+Healthcare AI system with Azure OpenAI, LangChain, ChromaDB, FAISS, FastAPI
+- 87% faster coding
+- $75K annual savings
+- 94% accuracy
+- Repository: https://github.com/Ganlak/medical_coding_system
+
+### Voice AI Assistant
+Real-time patient call handler with LangGraph, Azure OpenAI, ElevenLabs, Deepgram
+- 200+ calls per day
+- $50K annual savings
+- 4.5/5 patient rating
+- Repository: https://github.com/Ganlak/voice_ai_assistant
+
+### AI Resume-Job Matcher
+Intelligent candidate matching with Python, Azure OpenAI, NLP, Vector Embeddings
+- 95% match accuracy
+- 90% time reduction
+- $80K annual savings
+- Repository: https://github.com/Ganlak/Resume_POC
+
+## Additional Projects
+
+- AI-Driven Cybersecurity Investigation
+- AI-Driven Entity Resolution (MDM)
+- ITSM Incident Assignment Automation
+- Automated MCQ Generation
+- Medical Chatbot System
+- Global Automation Framework
+- Invoice Automatic Scanning
+- SWIFT Messages Automation
+- Security Services Operations
+
+## Technical Expertise
+
+**AI/ML Specializations:**
+- Generative AI and LLM Architectures
+- Agentic AI and Multi-Agent Systems
+- RAG Pipelines (FAISS, ChromaDB, Pinecone)
+- Healthcare AI (HIPAA-Compliant)
+- Voice AI (Real-Time Processing)
+- Banking and Finance AI
+- Cybersecurity Automation
+- HR Tech and Recruitment AI
+
+**Technical Stack:**
+- Azure OpenAI, AWS, GCP
+- LangChain, LangGraph, CrewAI
+- Python, FastAPI, Docker
+- Vector Databases
+- MLOps and Production Deployment
+
+## Education
+
+- Doctor of Business Administration (DBA) - In Progress, Great Lakes Institute of Management
+- Master of Business Administration (MBA) - Great Lakes Institute of Management
+- PGP in AI/ML - Great Lakes Executive Learning (2019-2020)
+
+## Experience
+
+- NTT DATA - Staff Engineer AI/ML (2024-Present)
+- Standard Chartered Bank - Lead Data Scientist (2020-2024)
+- AstraZeneca - Sr. Enterprise Computing Specialist (2016-2020)
+
+## Contact
+
+- Email: jagadeesan.ganesh@gmail.com
+- Phone: +91-9884517404
+- GitHub: https://github.com/Ganlak
+- LinkedIn: https://linkedin.com/in/ganeshjagadeesan
+- Portfolio: https://ganlak.github.io/Portfolio-Project/
+
+## Available for Contract Work
+
+Rates: $150-200/hour
+
+Roles: VP Data Science, Head of AI, CTO - AI, AI Strategy Consultant
+
+Availability: Immediate
+
+## Quick Start
+
+Clone the repository:
+```
+git clone https://github.com/Ganlak/Portfolio-Project.git
+cd Portfolio-Project
+```
+
+Open index.html in your browser or use a local server:
+```
+python -m http.server 8000
+```
+
+Then open http://localhost:8000
+
+## Project Structure
+```
+Portfolio-Project/
+├── index.html           # Main portfolio
+├── index_old.html       # Classic portfolio
+├── imgs/                # Images
+├── Html/                # Project pages
+├── css/                 # Stylesheets
+├── js/                  # JavaScript
+└── README.md           # This file
+```
+
+## License
+
+MIT License - see LICENSE file for details
+
 ---
 
-## ✨ Key Features
-
-- **Modern Gradient Design** - Professional purple/blue gradient aesthetic
-- **Responsive Layout** - Works perfectly on desktop, tablet, and mobile
-- **Smooth Animations** - Engaging scroll animations and hover effects
-- **12 Production Projects** - All with real metrics and GitHub links
-- **MBA + DBA Credentials** - Prominently displayed for C-suite positioning
-- **Professional Photo** - High-quality hero section with floating animation
-- **SEO Optimized** - Meta tags and semantic HTML
-- **Fast Loading** - No external dependencies, pure HTML/CSS/JS
-
----
-
-## 💰 Available for Contract Work
-
-**Rates:** $150-200/hour  
-**Roles:** VP Data Science | Head of AI | CTO - AI | AI Strategy Consultant  
-**Availability:** Immediate  
-**Time Zone:** IST (Chennai, India) | Remote-first
-
----
-
-## 📧 Contact
-
-- **Email:** [jagadeesan.ganesh@gmail.com](mailto:jagadeesan.ganesh@gmail.com)
-- **Phone:** +91-9884517404
-- **GitHub:** [@Ganlak](https://github.com/Ganlak)
-- **LinkedIn:** [ganeshjagadeesan](https://linkedin.com/in/ganeshjagadeesan)
-- **Portfolio:** [ganlak.github.io/Portfolio-Project](https://ganlak.github.io/Portfolio-Project/)
-
----
-
-## 🤝 Contributing
-
-This is a personal portfolio, but suggestions and feedback are welcome!
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- Design inspiration: Modern enterprise portfolio standards
-- Font: Inter by Google Fonts
-- Icons: SVG inline icons
-- Hosting: GitHub Pages
-
----
-
-## 📈 Stats
-
-![Portfolio Views](https://komarev.com/ghpvc/?username=Ganlak&label=Portfolio+Views&color=blueviolet&style=for-the-badge)
-
----
-
-<div align="center">
-
-**Built with 💜 for AI Innovation**
-
-⭐ Star this repo if you find it helpful!
-
-[View Portfolio](https://ganlak.github.io/Portfolio-Project/) • [Contact Me](mailto:jagadeesan.ganesh@gmail.com) • [LinkedIn](https://linkedin.com/in/ganeshjagadeesan)
-
-</div>
+Built for AI Innovation by Ganesh Jagadeesan
