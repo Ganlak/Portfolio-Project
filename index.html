@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Jagadeesan | AI & GEN AI Architect | MBA | Pursuing DBA | Enterprise AI Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gray: #6c757d;
+            --text: #2d3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid rgba(255,255,255,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .hero .subtitle {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .hero .description {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .domain-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .social-icon:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* Stats */
+        .stats {
+            background: var(--dark);
+            color: white;
+            padding: 80px 40px;
+        }
+
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Section */
+        section {
+            padding: 120px 40px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--dark);
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        /* Featured Projects */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+            position: relative;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .project-header h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .project-tech {
+            font-size: 14px;
+            opacity: 0.95;
+            margin-top: 15px;
+            line-height: 1.7;
+        }
+
+        .project-body {
+            padding: 40px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .metric {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: var(--text);
+            line-height: 1.9;
+            margin: 25px 0;
+            font-size: 15px;
+        }
+
+        .project-description strong {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Additional Projects */
+        .projects-grid-secondary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .project-card-small {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .project-card-small:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .project-card-small h4 {
+            font-size: 22px;
+            margin: 15px 0;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .project-card-small p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .mini-metrics {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .mini-metric {
+            flex: 1;
+            text-align: center;
+        }
+
+        .mini-metric-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .mini-metric-label {
+            font-size: 12px;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-content {
+            background: var(--light);
+            padding: 60px;
+            border-radius: 24px;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--text);
+        }
+
+        .about-content strong {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .expertise-box {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+        }
+
+        .expertise-box h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .education-highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .education-highlight .edu-icon {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .education-highlight .edu-degree {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .education-highlight .edu-school {
+            font-size: 15px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .expertise-list {
+            list-style: none;
+        }
+
+        .expertise-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .expertise-list li:last-child {
+            border-bottom: none;
+        }
+
+        .expertise-list li::before {
+            content: '✓';
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        /* Contact */
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: var(--light);
+            padding: 50px;
+            border-radius: 24px;
+        }
+
+        .contact-item {
+            margin: 25px 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--gray);
+            font-weight: 700;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .rate {
+            font-size: 64px;
+            font-weight: 900;
+            margin: 30px 0;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-grid,
+            .projects-grid-secondary {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subtitle {
+                font-size: 22px;
+            }
+
+            .profile-photo {
+                width: 220px;
+                height: 220px;
+            }
+
+            section {
+                padding: 80px 20px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Ganesh J.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="imgs/Ganesh.png" alt="Ganesh Jagadeesan" class="profile-photo">
+            </div>
+            <div class="hero-text">
+                <h1>Ganesh Jagadeesan</h1>
+                <div class="subtitle">AI & GEN AI Architect| MBA | Pursuing DBA at Great Lakes</div>
+                <p class="description">
+                    🚀 Built $1M+ ROI Systems Across Healthcare, Banking, Cybersecurity & Enterprise<br>
+                    19+ Years Enterprise AI Experience | MBA + Pursuing DBA (Great Lakes)<br>
+                    Specialized in Generative AI, Agentic Systems & RAG Pipelines
+                </p>
+                
+                <div class="domain-badges">
+                    <span class="badge">🏥 Healthcare AI</span>
+                    <span class="badge">🏦 Banking & Finance</span>
+                    <span class="badge">🔒 Cybersecurity</span>
+                    <span class="badge">🤖 Voice AI</span>
+                    <span class="badge">📊 Enterprise Systems</span>
+                    <span class="badge">⚡ MLOps</span>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://github.com/Ganlak" target="_blank" class="social-icon" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/ganeshjagadeesan" target="_blank" class="social-icon" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:jagadeesan.ganesh@gmail.com" class="social-icon" title="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                    </a>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">💰 Hire Me @ $150-200/hour</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">$1M+</div>
+                <div class="stat-label">ROI Delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">19+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">MBA + DBA</div>
+                <div class="stat-label">Great Lakes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">70-80%</div>
+                <div class="stat-label">Efficiency Gains</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Fortune 500</div>
+                <div class="stat-label">Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12 Projects</div>
+                <div class="stat-label">Production Systems</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Projects -->
+    <section id="projects" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔥 Featured Production Systems</h2>
+                <p class="section-subtitle">Enterprise-grade AI systems with GitHub repositories & proven ROI</p>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Medical Coding System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🏥 Healthcare AI</span>
+                        <h3>Medical Coding System</h3>
+                        <p>AI-Powered ICD-10 Automation</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> Azure OpenAI • LangChain • ChromaDB • FAISS • FastAPI • Docker • Multi-Agent Orchestration
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">87%</div>
+                                <div class="metric-label">Faster Coding</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">$75K</div>
+                                <div class="metric-label">Annual Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">94%</div>
+                                <div class="metric-label">Accuracy</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100K+</div>
+                                <div class="metric-label">Records/Year</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> Manual medical coding takes 15-20 minutes per record with 8-12% error rates.<br><br>
+                            <strong>Solution:</strong> Built production-grade AI system with multi-agent orchestration, RAG with re-ranking, year-wise CMS code management, and HIPAA-compliant audit trails.<br><br>
+                            <strong>Impact:</strong> 6x ROI in first year, reduced coding time to 2-5 seconds, eliminated manual errors.
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ganlak/medical_coding_system" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice AI Assistant -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🤖 Voice AI</span>
+                        <h3>Voice AI Assistant</h3>
+                        <p>Real-Time Patient Call Handler</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> LangGraph • Azure OpenAI • ElevenLabs • Deepgram • Twilio • Pipecat • FAISS • FastAPI
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">200+</div>
+                                <div class="metric-label">Calls/Day</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">$50K</div>
+                                <div class="metric-label">Annual Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">4.5/5</div>
+                                <div class="metric-label">Patient Rating</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">2-4s</div>
+                                <div class="metric-label">Response Time</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> Urgent care centers need 24/7 patient support for appointments, walk-ins, and inquiries.<br><br>
+                            <strong>Solution:</strong> Built production voice AI with real-time telephony integration, multi-agent orchestration, SOP-based retrieval, and natural conversation with context memory.<br><br>
+                            <strong>Impact:</strong> Deployed to WellStreet Urgent Care, handles 200+ calls daily, replaced need for 2 FTE receptionists.
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ganlak/voice_ai_assistant" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume POC - Candidate Job Matcher -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🎯 HR Tech / Recruitment AI</span>
+                        <h3>AI Resume-Job Matcher</h3>
+                        <p>Intelligent Candidate-Job Matching System</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> Python • Azure OpenAI • NLP • Vector Embeddings • FAISS • Semantic Search • Resume Parser
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">95%</div>
+                                <div class="metric-label">Match Accuracy</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">90%</div>
+                                <div class="metric-label">Time Reduction</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">10K+</div>
+                                <div class="metric-label">Resumes Processed</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">$80K</div>
+                                <div class="metric-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> Manual resume screening and candidate-job matching is time-consuming, inconsistent, and often misses qualified candidates.<br><br>
+                            <strong>Solution:</strong> Built AI-powered system using semantic search, vector embeddings, and NLP to automatically match candidates to job descriptions based on skills, experience, and qualifications.<br><br>
+                            <strong>Impact:</strong> 90% reduction in screening time, 95% match accuracy, improved quality of hire, eliminated bias in initial screening.
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ganlak/Resume_POC/tree/main/candidate-job-matcher" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Enterprise Projects -->
+            <div style="margin-top: 100px;">
+                <h3 style="font-size: 40px; font-weight: 900; text-align: center; margin-bottom: 20px; color: var(--dark);">Additional Enterprise Projects</h3>
+                <p style="text-align: center; color: var(--gray); font-size: 18px; margin-bottom: 60px;">Production-grade AI systems across Banking, Cybersecurity, and Enterprise domains</p>
+                
+                <div class="projects-grid-secondary">
+                    <!-- Cybersecurity Investigation -->
+                    <div class="project-card-small">
+                        <span class="project-badge">🔒 Cybersecurity</span>
+                        <h4>AI-Driven Cybersecurity Investigation</h4>
+                        <p>Automated alert triage, investigation, and threat response using multi-agent AI systems</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">85%</div>
+                                <div class="mini-metric-label">Faster Response</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">$150K</div>
+                                <div class="mini-metric-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project1.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- Entity Resolution -->
+                    <div class="project-card-small">
+                        <span class="project-badge">📊 Enterprise MDM</span>
+                        <h4>AI-Driven Entity Resolution</h4>
+                        <p>Master data management and intelligent deduplication using NLP and fuzzy matching</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">98%</div>
+                                <div class="mini-metric-label">Match Accuracy</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">$100K</div>
+                                <div class="mini-metric-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_2.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- ITSM Incident Assignment -->
+                    <div class="project-card-small">
+                        <span class="project-badge">📊 Enterprise ITSM</span>
+                        <h4>AI-Driven ITSM Incident Assignment</h4>
+                        <p>Smart incident routing and prioritization with ML-powered classification</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">90%</div>
+                                <div class="mini-metric-label">Auto-Assignment</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">$180K</div>
+                                <div class="mini-metric-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_3.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- MCQ Generation -->
+                    <div class="project-card-small">
+                        <span class="project-badge">🎓 EdTech AI</span>
+                        <h4>Automated MCQ Generation</h4>
+                        <p>AI-powered question generation from documents using NLP and knowledge extraction</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">95%</div>
+                                <div class="mini-metric-label">Quality Score</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">80%</div>
+                                <div class="mini-metric-label">Time Saved</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_4.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- Medical Chatbot Documentation -->
+                    <div class="project-card-small">
+                        <span class="project-badge">🏥 Healthcare AI</span>
+                        <h4>Medical Chatbot System</h4>
+                        <p>Comprehensive healthcare chatbot with symptom analysis and triage capabilities</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">92%</div>
+                                <div class="mini-metric-label">Accuracy</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">24/7</div>
+                                <div class="mini-metric-label">Availability</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_5.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- Global Automation -->
+                    <div class="project-card-small">
+                        <span class="project-badge">🌐 Data Collection AI</span>
+                        <h4>Global Automation</h4>
+                        <p>Automated data collection and processing system for multi-source integration</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">85%</div>
+                                <div class="mini-metric-label">Automation Rate</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">$90K</div>
+                                <div class="mini-metric-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_6.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- Invoice Scanning -->
+                    <div class="project-card-small">
+                        <span class="project-badge">📄 Document AI</span>
+                        <h4>Invoice Automatic Scanning</h4>
+                        <p>OCR and NLP-powered invoice processing with text predictions and validation</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">97%</div>
+                                <div class="mini-metric-label">Accuracy</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">75%</div>
+                                <div class="mini-metric-label">Time Reduction</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_7.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- MT740 SWIFT -->
+                    <div class="project-card-small">
+                        <span class="project-badge">🏦 Banking & Finance</span>
+                        <h4>SWIFT Messages Automation (MT740)</h4>
+                        <p>Intelligent automation of SWIFT message processing using NLP techniques</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">95%</div>
+                                <div class="mini-metric-label">Accuracy</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">$120K</div>
+                                <div class="mini-metric-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_8.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+
+                    <!-- SSO Security Services -->
+                    <div class="project-card-small">
+                        <span class="project-badge">🔐 Security Operations</span>
+                        <h4>Security Services Operations (SSO)</h4>
+                        <p>Comprehensive security operations management and monitoring system</p>
+                        <div class="mini-metrics">
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">99.5%</div>
+                                <div class="mini-metric-label">Uptime</div>
+                            </div>
+                            <div class="mini-metric">
+                                <div class="mini-metric-value">24/7</div>
+                                <div class="mini-metric-label">Monitoring</div>
+                            </div>
+                        </div>
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="./Html/project_9.html" target="_blank" class="project-link" style="width: 100%; justify-content: center;">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Building the future of enterprise AI with technical expertise and business acumen</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>
+                        I'm a seasoned <strong>AI & GEN AI Architectwith 19+ years of enterprise experience, MBA, and currently pursuing a DBA (Doctor of Business Administration) at Great Lakes Institute of Management</strong>. I build production-grade AI systems that deliver measurable ROI across multiple domains, while combining technical expertise with strategic business acumen.
+                    </p>
+                    <p>
+                        Currently transitioning into <strong>C-suite leadership roles (VP Data Science, Head of AI, CTO - AI)</strong> where I can leverage both my technical depth and business education to drive <strong>AI-first transformation and strategic innovation</strong>.
+                    </p>
+                    <p>
+                        My expertise spans <strong>Healthcare AI, Banking & Finance, Cybersecurity, Voice AI, HR Tech, and Enterprise Systems</strong>. I specialize in architecting autonomous, LLM-driven systems that scale business intelligence and catalyze digital transformation.
+                    </p>
+                    <p>
+                        I've delivered <strong>70-80% process efficiency gains</strong> and built systems that have saved organizations over <strong>$1M+ in operational costs</strong>. My work with Fortune 500 companies includes Standard Chartered Bank, AstraZeneca, and enterprise clients across APAC, EMEA, and North America.
+                    </p>
+                    <p>
+                        <strong>💰 Available for US contract work at $150-200/hour</strong> for strategic leadership roles that require both AI/ML expertise and business strategy capabilities.
+                    </p>
+                </div>
+
+                <div class="expertise-box">
+                    <!-- Education Highlight -->
+                    <div class="education-highlight">
+                        <div class="edu-icon">🎓 EDUCATION</div>
+                        <div class="edu-degree">MBA | Pursuing DBA</div>
+                        <div class="edu-school">
+                            Great Lakes Institute of Management<br>
+                            Master of Business Administration<br>
+                            Doctor of Business Administration (In Progress)
+                        </div>
+                    </div>
+
+                    <h3>Core Expertise</h3>
+                    <ul class="expertise-list">
+                        <li>Generative AI & LLM Architectures</li>
+                        <li>Agentic AI & Multi-Agent Systems</li>
+                        <li>RAG Pipelines (FAISS, ChromaDB, Pinecone)</li>
+                        <li>Healthcare AI (HIPAA-Compliant)</li>
+                        <li>Voice AI (Real-Time Processing)</li>
+                        <li>Banking & Finance AI</li>
+                        <li>Cybersecurity Automation</li>
+                        <li>HR Tech & Recruitment AI</li>
+                        <li>MLOps & Production Deployment</li>
+                        <li>Azure OpenAI & AWS Integration</li>
+                        <li>Strategic AI Leadership</li>
+                        <li>Business Strategy & Innovation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-subtitle">Open to US contracts for VP/Head of AI/CTO roles</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 style="font-size: 28px; margin-bottom: 35px; font-weight: 800;">Contact Information</h3>
+                        <div class="contact-item">
+                            <strong>📍 Location</strong>
+                            Chennai, India (Remote-first)
+                        </div>
+                        <div class="contact-item">
+                            <strong>📧 Email</strong>
+                            <a href="mailto:jagadeesan.ganesh@gmail.com">jagadeesan.ganesh@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>📱 Phone</strong>
+                            <a href="tel:+919884517404">+91-9884517404</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>💼 GitHub</strong>
+                            <a href="https://github.com/Ganlak" target="_blank">github.com/Ganlak</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>💼 LinkedIn</strong>
+                            <a href="https://linkedin.com/in/ganeshjagadeesan" target="_blank">linkedin.com/in/ganeshjagadeesan</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>Contract Rates</h3>
+                        <span class="rate">$150-200/hr</span>
+                        <p style="margin-bottom: 20px; opacity: 0.95; font-size: 17px;">Available for strategic leadership roles:</p>
+                        <p style="font-size: 16px; opacity: 0.95; line-height: 1.9;">
+                            • VP – Data Science<br>
+                            • Head of AI/Architecture<br>
+                            • CTO – AI<br>
+                            • AI Strategy Consultant
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size: 16px; margin-bottom: 10px;">&copy; 2025 Ganesh Jagadeesan, MBA, DBA Candidate. All rights reserved.</p>
+        <p style="opacity: 0.7; font-size: 14px;">Built with passion for AI innovation 🚀</p>
+        <p style="margin-top: 25px; opacity: 0.6; font-size: 13px;">
+            View <a href="index_old.html" style="color: white; text-decoration: underline;">classic portfolio</a>
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .project-card-small').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.03)';
+            }
+        });
+    </script>
+</body>
+</html>
