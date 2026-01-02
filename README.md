@@ -1,47 +1,76 @@
-# PORTFOLIO FOR CLIENT - GANESH JAGADEESAN 🎨
+---
 
-Welcome to the Portfolio  project! This repository contains the code for a personal portfolio website inspired by Ryan Adlard's design.
+## ✨ Key Features
 
-## Features ✨
+- **Modern Gradient Design** - Professional purple/blue gradient aesthetic
+- **Responsive Layout** - Works perfectly on desktop, tablet, and mobile
+- **Smooth Animations** - Engaging scroll animations and hover effects
+- **12 Production Projects** - All with real metrics and GitHub links
+- **MBA + DBA Credentials** - Prominently displayed for C-suite positioning
+- **Professional Photo** - High-quality hero section with floating animation
+- **SEO Optimized** - Meta tags and semantic HTML
+- **Fast Loading** - No external dependencies, pure HTML/CSS/JS
 
-- **Responsive Design** 📱: Works on all devices, big and small.
-- **Modern UI/UX** 💅: Clean and professional design.
-- **Easy Customization** 🛠️: Simple to update with your own information.
+---
 
-## Installation 🛠️
+## 💰 Available for Contract Work
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/spectre0037/Portfolio-Project.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd spectre0037/Portfolio-Project
-    ```
-3. Install dependencies:
-    ```bash
-    npm install
-    ```
+**Rates:** $150-200/hour  
+**Roles:** VP Data Science | Head of AI | CTO - AI | AI Strategy Consultant  
+**Availability:** Immediate  
+**Time Zone:** IST (Chennai, India) | Remote-first
 
-## Usage 🚀
+---
 
-To start the development server, run:
-```bash
-npm start
-```
-Open your browser and go to `http://localhost:3000` to see the website.
+## 📧 Contact
 
-## Contributing 🤝
+- **Email:** [jagadeesan.ganesh@gmail.com](mailto:jagadeesan.ganesh@gmail.com)
+- **Phone:** +91-9884517404
+- **GitHub:** [@Ganlak](https://github.com/Ganlak)
+- **LinkedIn:** [ganeshjagadeesan](https://linkedin.com/in/ganeshjagadeesan)
+- **Portfolio:** [ganlak.github.io/Portfolio-Project](https://ganlak.github.io/Portfolio-Project/)
 
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
+---
 
-## License 📄
+## 🤝 Contributing
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This is a personal portfolio, but suggestions and feedback are welcome!
 
-## Contact 📧
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-If you have any questions or feedback, feel free to reach out!
+---
 
-Enjoy building your portfolio! 🎉
+## 📄 License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Design inspiration: Modern enterprise portfolio standards
+- Font: Inter by Google Fonts
+- Icons: SVG inline icons
+- Hosting: GitHub Pages
+
+---
+
+## 📈 Stats
+
+![Portfolio Views](https://komarev.com/ghpvc/?username=Ganlak&label=Portfolio+Views&color=blueviolet&style=for-the-badge)
+
+---
+
+<div align="center">
+
+**Built with 💜 for AI Innovation**
+
+⭐ Star this repo if you find it helpful!
+
+[View Portfolio](https://ganlak.github.io/Portfolio-Project/) • [Contact Me](mailto:jagadeesan.ganesh@gmail.com) • [LinkedIn](https://linkedin.com/in/ganeshjagadeesan)
+
+</div>
