@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXCO Automation Bot — Intelligent IT Operations</title>
+    <link rel="stylesheet" href="../css/project_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EXCO Automation Bot — Intelligent IT Operations</h1>
+        <p>A deployed ChatOps automation bot that classifies IT-operations requests and routes them to the right specialist agent. Built as a LangGraph workflow with an Azure OpenAI GPT-4o intent classifier, it distinguishes Root Cause Analysis, Metrics, and General requests across ten IT topics and seven operational categories, then dispatches each to the appropriate downstream agent.</p>
+
+        <h2>Key Achievements</h2>
+        <ul>
+            <li><strong>Completed &amp; deployed:</strong> A production ChatOps flow (Flow ID 101) running behind a FastAPI backend and LangGraph executor.</li>
+            <li><strong>Multi-dimensional classification:</strong> Every request is classified along three dimensions — intent (3), topic (10), and category (7) — for precise routing.</li>
+            <li><strong>Agent routing:</strong> The intent classifier routes to an RCA Agent, a Metrics Agent, or a general response path based on the detected intent.</li>
+            <li><strong>Conversation-aware:</strong> Uses conversation history so classification accounts for the ongoing dialog, not just the latest message.</li>
+            <li><strong>Config-driven workflow:</strong> The flow is defined declaratively in <code>flowbook.yaml</code> and compiled by a WorkflowGenerator — generated files are never edited by hand.</li>
+        </ul>
+
+        <h2>Classification Schema</h2>
+        <ul>
+            <li><strong>Intent (3):</strong> RCA, METRICS, GENERAL.</li>
+            <li><strong>Topic (10):</strong> printer, endpoint, network, meeting_room, collaboration, server, application, security, mobile, storage.</li>
+            <li><strong>Category (7):</strong> performance, availability, compliance, patching, security, capacity, configuration.</li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <p>The bot sits inside a layered ChatOps stack that takes a user query from a React frontend down to a routed agent response:</p>
+        <ul>
+            <li><strong>Frontend:</strong> React chat interface.</li>
+            <li><strong>ChatOps Backend:</strong> FastAPI service (port 8000) handling requests.</li>
+            <li><strong>LangGraph Executor:</strong> FastAPI service (port 8001) that runs compiled workflows.</li>
+            <li><strong>EXCO Bot Workflow:</strong> The Flow ID 101 graph that invokes the intent classifier tool.</li>
+            <li><strong>Intent Classifier Agent:</strong> Azure OpenAI GPT-4o with dedicated prompts and input/output schemas.</li>
+            <li><strong>Routing:</strong> RCA Agent, Metrics Agent, or General Response based on classification.</li>
+        </ul>
+
+        <h2>Workflow Design</h2>
+        <ul>
+            <li><strong>Declarative flow:</strong> Nodes, edges, and config are specified in <code>flowbook.yaml</code> (timeout, retry, and error-handling support built in).</li>
+            <li><strong>Auto-generated code:</strong> A WorkflowGenerator compiles <code>agent.py</code>, tools, state, nodes, schemas, and <code>langgraph.json</code> from the flowbook.</li>
+            <li><strong>Consolidated config:</strong> Tool-specific environment files are merged into a single consolidated <code>.env</code> at build time.</li>
+            <li><strong>MCP tools:</strong> Includes test and discovery scripts for the bot's MCP tool set.</li>
+        </ul>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li><strong>Orchestration:</strong> LangGraph</li>
+            <li><strong>LLM:</strong> Azure OpenAI GPT-4o</li>
+            <li><strong>Backend:</strong> FastAPI (ChatOps + LangGraph executor)</li>
+            <li><strong>Frontend:</strong> React</li>
+            <li><strong>Config:</strong> flowbook.yaml + consolidated .env</li>
+            <li><strong>Tooling:</strong> Model Context Protocol (MCP) tools</li>
+        </ul>
+
+        <h2>Business Impact</h2>
+        <ul>
+            <li>Automates triage of IT-operations requests directly inside a chat interface</li>
+            <li>Precise three-dimensional classification routes work to the right specialist agent</li>
+            <li>Declarative, generator-driven workflows make new flows fast and consistent to ship</li>
+            <li>Conversation awareness improves accuracy on multi-turn operational requests</li>
+        </ul>
+
+        <span>View the project on GitHub:</span>
+        <br>
+        <button id="github-btn" onclick="window.open('https://github.com/Ganlak', '_blank')">View on GitHub</button>
+    </div>
+</body>
+</html>

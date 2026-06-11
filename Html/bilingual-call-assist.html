@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThubIQ — Bilingual Call Assist</title>
+    <link rel="stylesheet" href="../css/project_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ThubIQ — Bilingual Call Assist</h1>
+        <p>A real-time Spanish/English translation assistant for US call centers. The customer speaks Spanish (or Spanglish — mixed Spanish and English) and the human agent reads a live English translation in a dashboard, then replies in English by voice — with the customer hearing natural Spanish back. Built on LiveKit Agents with a streaming STT → translation → TTS pipeline and a live React dashboard.</p>
+
+        <h2>Key Achievements</h2>
+        <ul>
+            <li><strong>Live bilingual bridge:</strong> Customer Spanish/Spanglish is transcribed and translated to English on screen in real time, while the agent's English replies are spoken back to the customer in Spanish.</li>
+            <li><strong>Zero new infrastructure:</strong> Reuses existing Azure OpenAI, Deepgram, ElevenLabs, and LiveKit credentials — no new resources to provision.</li>
+            <li><strong>Streaming dashboard:</strong> FastAPI + Server-Sent Events push transcripts and translations to a React/Vite/Tailwind UI as the conversation unfolds.</li>
+            <li><strong>Full call capture:</strong> Every call is saved as a JSON transcript and a WAV recording (mic + speaker) for QA and review.</li>
+            <li><strong>Scenario personas:</strong> Swappable customer scenarios (e.g., insurance claim, healthcare appointment) for realistic agent training and demos.</li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <p>The system orchestrates a low-latency voice pipeline through LiveKit Agents with each layer handled by a best-in-class component:</p>
+        <ul>
+            <li><strong>Speech-to-Text:</strong> Deepgram Nova-3 streaming transcription of the customer's Spanish/Spanglish audio.</li>
+            <li><strong>Translation:</strong> Azure OpenAI GPT-4o-mini for Spanish → English translation surfaced to the agent.</li>
+            <li><strong>Spanish TTS:</strong> ElevenLabs Multilingual v2 voices the agent's English replies back to the customer in Spanish.</li>
+            <li><strong>Customer Persona LLM:</strong> Azure OpenAI GPT-4o-mini drives the simulated Spanish-speaking customer for the POC.</li>
+            <li><strong>Orchestration:</strong> LiveKit Agents handles real-time audio routing and participant management.</li>
+            <li><strong>Backend:</strong> FastAPI with SSE event streaming (<code>dashboard_api.py</code>, <code>live_bus.py</code>).</li>
+            <li><strong>Frontend:</strong> React + Vite + Tailwind dashboard with a Spanish/English split view.</li>
+            <li><strong>Recording:</strong> WAV capture of both mic and speaker channels (<code>recording.py</code>).</li>
+        </ul>
+
+        <h2>System Flow</h2>
+        <ul>
+            <li><strong>1. Warm-up:</strong> The backend pre-warms the LiveKit agent; the dashboard status pill turns green and shows "Ready".</li>
+            <li><strong>2. Start call:</strong> The agent (customer persona) begins speaking Spanish immediately.</li>
+            <li><strong>3. Listen &amp; read:</strong> The left column shows the customer's Spanish plus the English translation beneath it; the agent hears Spanish through the speakers.</li>
+            <li><strong>4. Agent replies:</strong> The agent speaks English into the mic; their words appear in the right column and are voiced back in Spanish to the customer.</li>
+            <li><strong>5. End call:</strong> The transcript is saved as JSON and the audio as WAV for later review.</li>
+        </ul>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li><strong>STT:</strong> Deepgram Nova-3</li>
+            <li><strong>Translation &amp; Persona LLM:</strong> Azure OpenAI GPT-4o-mini</li>
+            <li><strong>Spanish TTS:</strong> ElevenLabs Multilingual v2</li>
+            <li><strong>Orchestration:</strong> LiveKit Agents</li>
+            <li><strong>Backend:</strong> FastAPI + Server-Sent Events</li>
+            <li><strong>Frontend:</strong> React + Vite + Tailwind CSS</li>
+            <li><strong>Recording:</strong> WAV (mic + speaker capture)</li>
+        </ul>
+
+        <h2>Business Impact</h2>
+        <ul>
+            <li>Lets English-only agents serve Spanish-speaking customers without bilingual hiring</li>
+            <li>Real-time on-screen translation reduces miscommunication and call handle time</li>
+            <li>Reuses existing AI credentials, so deployment cost and provisioning overhead stay near zero</li>
+            <li>Saved transcripts and recordings support QA, compliance, and agent coaching</li>
+        </ul>
+
+        <h2>Future Enhancements</h2>
+        <ul>
+            <li>Additional language pairs beyond Spanish/English</li>
+            <li>Live agent assist with suggested responses and sentiment cues</li>
+            <li>CRM integration for automatic call logging and customer lookup</li>
+            <li>Analytics dashboard for translation latency and call outcomes</li>
+        </ul>
+
+        <span>View the project on GitHub:</span>
+        <br>
+        <button id="github-btn" onclick="window.open('https://github.com/Ganlak', '_blank')">View on GitHub</button>
+    </div>
+</body>
+</html>

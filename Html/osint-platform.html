@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Agentic AI Intelligence Platform</title>
+    <link rel="stylesheet" href="../css/project_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OSINT Agentic AI Intelligence Platform</h1>
+        <p>An integrated Open Source Intelligence (OSINT) platform for law enforcement, built with a multi-agent AI architecture that connects siloed systems into a unified intelligence layer. Designed for the Ministry of Home Affairs and police departments across India (Maharashtra as pilot state), it uses a LangGraph hub-and-spoke orchestration of seven specialized agents over a full-stack, container-orchestrated backend.</p>
+
+        <h2>Key Achievements</h2>
+        <ul>
+            <li><strong>Seven-agent orchestration:</strong> A LangGraph hub-and-spoke design coordinates seven specialized agents that collaborate in real time on intelligence tasks.</li>
+            <li><strong>Unified intelligence layer:</strong> Connects multiple siloed law-enforcement data sources (criminal records, courts, emergency calls, social media, CCTV metadata) into a single queryable platform.</li>
+            <li><strong>Multi-database backbone:</strong> Combines PostgreSQL + PostGIS (geospatial), Neo4j (criminal-network graphs), Redis (cache), and ChromaDB (vector search) behind one async FastAPI service.</li>
+            <li><strong>Full-stack delivery:</strong> React 19 + TypeScript frontend with nine main pages (dashboard, chat, map, network graph, etc.) backed by a documented API.</li>
+            <li><strong>Container-orchestrated:</strong> Docker Compose for development with a path to Azure Kubernetes Service for production.</li>
+        </ul>
+
+        <h2>The Seven Agents</h2>
+        <ul>
+            <li><strong>Supervisor:</strong> Intent classification and routing across the agent network.</li>
+            <li><strong>Investigation Chatbot:</strong> General OSINT queries and investigative guidance.</li>
+            <li><strong>Criminal Profiler:</strong> Criminal records lookup and risk scoring.</li>
+            <li><strong>Social Media Threat Monitor:</strong> Threat detection and sentiment analysis across platforms.</li>
+            <li><strong>Criminal Network Mapper:</strong> Graph analysis and hub detection over Neo4j relationships.</li>
+            <li><strong>Crime Analyst:</strong> Hotspot analysis and patrol optimization using geospatial data.</li>
+            <li><strong>MHA Briefing Generator:</strong> Executive-level intelligence summaries.</li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <ul>
+            <li><strong>Backend:</strong> FastAPI (Python 3.11) with full async support.</li>
+            <li><strong>AI Orchestration:</strong> LangGraph hub-and-spoke with seven specialized agents and tools.</li>
+            <li><strong>LLM:</strong> Azure OpenAI GPT-4o.</li>
+            <li><strong>Databases:</strong> PostgreSQL + PostGIS, Neo4j (graph), Redis (cache), ChromaDB (vectors).</li>
+            <li><strong>Frontend:</strong> React 19 + TypeScript + Vite + TailwindCSS with Zustand state management.</li>
+            <li><strong>Ingestion:</strong> A sources → transform → sinks data pipeline feeding the intelligence layer.</li>
+            <li><strong>Middleware:</strong> Authentication, logging, and rate limiting.</li>
+            <li><strong>Infrastructure:</strong> Docker Compose (dev), Azure Kubernetes Service (prod).</li>
+        </ul>
+
+        <h2>Data Sources (Read-Only)</h2>
+        <ul>
+            <li><strong>CCTNS:</strong> Criminal records and FIRs across a national network of police stations.</li>
+            <li><strong>ICJS:</strong> Courts, prisons, and prosecution data.</li>
+            <li><strong>Dial 100:</strong> Emergency call records.</li>
+            <li><strong>Social Media:</strong> Major platforms integrated via APIs (dummy/sandbox data in the POC).</li>
+            <li><strong>CCTV / Safe City:</strong> Camera metadata and feed references.</li>
+        </ul>
+
+        <h2>Key Differentiators</h2>
+        <ul>
+            <li>An integrated Agentic AI OSINT platform purpose-built for law enforcement</li>
+            <li>Seven autonomous AI agents collaborating in real time</li>
+            <li>Geospatial, graph, relational, and vector intelligence unified in one stack</li>
+            <li>Bilingual (English + Hindi) support on the roadmap</li>
+        </ul>
+
+        <h2>Business Impact</h2>
+        <ul>
+            <li>Breaks down data silos so investigators query many sources from one interface</li>
+            <li>Network mapping and hotspot analysis support proactive policing and patrol optimization</li>
+            <li>Executive briefing generation turns raw intelligence into decision-ready summaries</li>
+            <li>Container-first design enables secure, scalable deployment from pilot to production</li>
+        </ul>
+
+        <span>View the project on GitHub:</span>
+        <br>
+        <button id="github-btn" onclick="window.open('https://github.com/Ganlak', '_blank')">View on GitHub</button>
+    </div>
+</body>
+</html>

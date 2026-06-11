@@ -818,7 +818,7 @@
                 <div class="stat-label">Clients</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">12 Projects</div>
+                <div class="stat-number">17 Projects</div>
                 <div class="stat-label">Production Systems</div>
             </div>
         </div>
@@ -948,6 +948,206 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Ganlak/Resume_POC/tree/main/candidate-job-matcher" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dalmia AI Triage & Classification Engine -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🎯 AI Support / Triage</span>
+                        <h3>AI Triage & Classification Engine</h3>
+                        <p>Automated Support Ticket Routing (MCP)</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> LangGraph • FastAPI • Model Context Protocol • Azure OpenAI • Claude • Gemini • Pydantic • Config-Driven
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">&lt;2s</div>
+                                <div class="metric-label">Classify Time</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">3 LLMs</div>
+                                <div class="metric-label">Provider Choice</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">0.85+</div>
+                                <div class="metric-label">Auto-Route Threshold</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Config-Driven</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> Manual triage of application-support tickets is slow and inconsistent, causing misroutes and delayed resolution.<br><br>
+                            <strong>Solution:</strong> Built an MCP-based platform with a LangGraph pipeline (preprocess → classify → parse) and FastAPI backend that auto-routes tickets by category and confidence, escalating uncertain cases to humans.<br><br>
+                            <strong>Impact:</strong> Seconds-to-classify routing, provider-agnostic (OpenAI/Claude/Gemini), and fully config-driven categories and thresholds with no redeploys.
+                        </div>
+                        <div class="project-links">
+                            <a href="./Html/dalmia-ai-triage.html" target="_blank" class="project-link">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ThubIQ Bilingual Call Assist -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🌐 Voice AI / Translation</span>
+                        <h3>Bilingual Call Assist (ThubIQ)</h3>
+                        <p>Real-Time Spanish ↔ English Call Translation</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> LiveKit Agents • Deepgram Nova-3 • Azure OpenAI • ElevenLabs Multilingual • FastAPI • SSE • React • Vite • Tailwind
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">Real-Time</div>
+                                <div class="metric-label">Live Translation</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">2 Languages</div>
+                                <div class="metric-label">ES ↔ EN</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Zero</div>
+                                <div class="metric-label">New Infra</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Calls Recorded</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> US call centers struggle to serve Spanish and Spanglish-speaking customers without bilingual staff.<br><br>
+                            <strong>Solution:</strong> Built a LiveKit-orchestrated pipeline (Deepgram STT → Azure OpenAI translation → ElevenLabs Spanish TTS) with a live React dashboard so English-only agents read Spanish in English and reply by voice.<br><br>
+                            <strong>Impact:</strong> Real-time bilingual bridge reusing existing AI credentials, with every call saved as JSON transcript and WAV recording for QA.
+                        </div>
+                        <div class="project-links">
+                            <a href="./Html/bilingual-call-assist.html" target="_blank" class="project-link">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Claim Adjuster Voice AI - Alex -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🏦 Insurance / Voice AI</span>
+                        <h3>Claim Adjuster Voice AI (Alex)</h3>
+                        <p>Autonomous Recorded-Statement Interviews</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> LiveKit Agents • Deepgram • Azure OpenAI • ElevenLabs • FAISS • Twilio SIP • LangChain LCEL • Silero VAD
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Autonomous Intake</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Real-Time</div>
+                                <div class="metric-label">Fraud Signals</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">In + Out</div>
+                                <div class="metric-label">Bound Calls</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">5 Artifacts</div>
+                                <div class="metric-label">Per Call</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> First-notice-of-loss recorded statements are slow, manual, and inconsistent, with fraud and litigation risk often caught too late.<br><br>
+                            <strong>Solution:</strong> Built an autonomous voice adjuster on LiveKit that conducts statements, extracts structured claim entities live, and flags fraud, litigation, and sentiment — with a post-call SIU-style fraud triage routing high-risk claims to humans.<br><br>
+                            <strong>Impact:</strong> Each call yields a complete claim JSON, WAV, PDF, quality critique, and fraud assessment; inbound and outbound (AMD) calling with full audit trail.
+                        </div>
+                        <div class="project-links">
+                            <a href="./Html/claim-adjuster-poc.html" target="_blank" class="project-link">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OSINT Agentic AI Intelligence Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">🛡️ Law Enforcement / Agentic AI</span>
+                        <h3>OSINT Agentic Intelligence Platform</h3>
+                        <p>7-Agent Intelligence Layer for Law Enforcement</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> LangGraph • Azure OpenAI GPT-4o • FastAPI • PostgreSQL + PostGIS • Neo4j • Redis • ChromaDB • React 19 • TypeScript • Docker • AKS
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">7 Agents</div>
+                                <div class="metric-label">Multi-Agent AI</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">4 DBs</div>
+                                <div class="metric-label">Geo • Graph • Vector • Cache</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">5 Sources</div>
+                                <div class="metric-label">Unified Intelligence</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">9 Pages</div>
+                                <div class="metric-label">Full-Stack UI</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> Law-enforcement data lives in disconnected silos — criminal records, courts, emergency calls, social media, and CCTV — making unified investigation slow.<br><br>
+                            <strong>Solution:</strong> Built a LangGraph hub-and-spoke platform with 7 specialized agents (profiler, network mapper, threat monitor, crime analyst, briefing generator, and more) over PostGIS, Neo4j, Redis, and ChromaDB.<br><br>
+                            <strong>Impact:</strong> A single intelligence layer enabling criminal-network mapping, geospatial hotspot analysis, threat monitoring, and executive briefings.
+                        </div>
+                        <div class="project-links">
+                            <a href="./Html/osint-platform.html" target="_blank" class="project-link">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXCO Automation Bot -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">⚙️ IT Operations / ChatOps</span>
+                        <h3>EXCO Automation Bot</h3>
+                        <p>Intent Classification &amp; RCA/Metrics Routing</p>
+                        <div class="project-tech">
+                            <strong>Tech Stack:</strong> LangGraph • Azure OpenAI GPT-4o • FastAPI • React • MCP Tools • flowbook.yaml (config-driven)
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">3×10×7</div>
+                                <div class="metric-label">Intent × Topic × Category</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">3 Agents</div>
+                                <div class="metric-label">RCA • Metrics • General</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Deployed</div>
+                                <div class="metric-label">Production Flow</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Config</div>
+                                <div class="metric-label">Driven Workflow</div>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <strong>Problem:</strong> IT-operations requests arrive unstructured in chat and need fast, accurate routing to the right specialist.<br><br>
+                            <strong>Solution:</strong> Built a deployed ChatOps LangGraph workflow with a GPT-4o intent classifier that labels each request across intent, topic, and category, then routes to RCA, Metrics, or general agents — declaratively defined in flowbook.yaml.<br><br>
+                            <strong>Impact:</strong> Conversation-aware classification and generator-driven flows that make new automations fast and consistent to ship.
+                        </div>
+                        <div class="project-links">
+                            <a href="./Html/exco-bot.html" target="_blank" class="project-link">View Details →</a>
                         </div>
                     </div>
                 </div>

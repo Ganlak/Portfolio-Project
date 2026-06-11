@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalmia AI Triage &amp; Classification Engine</title>
+    <link rel="stylesheet" href="../css/project_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dalmia AI Triage &amp; Classification Engine</h1>
+        <p>A production-grade AI support platform that automatically triages and classifies incoming application-support tickets. Built on a Model Context Protocol (MCP) architecture with a config-driven LangGraph pipeline and FastAPI backend, it routes each ticket to the right team in seconds and escalates low-confidence cases to humans.</p>
+
+        <h2>Key Achievements</h2>
+        <ul>
+            <li><strong>Seconds-to-classify:</strong> Replaces manual ticket triage with an automated preprocess → classify → parse pipeline that returns a routed category with a confidence score.</li>
+            <li><strong>Confidence-based routing:</strong> High-confidence tickets (≥0.85) auto-route to the correct team; medium/low-confidence tickets are flagged for human review, eliminating silent misroutes.</li>
+            <li><strong>Multi-provider, zero lock-in:</strong> Pluggable LLM factory supports OpenAI, Anthropic Claude, and Google Gemini, all selectable at request time without code changes.</li>
+            <li><strong>Config-driven:</strong> Categories, colors, routing targets, models, and thresholds all live in <code>config.yaml</code> — tuning classification requires no redeploy.</li>
+            <li><strong>Vision-ready:</strong> Accepts screenshot uploads (base64 or multipart) so users can attach error screens for richer classification.</li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <p>The system is Module 1 of a larger AI-Driven Application Support Platform and is built around a clean separation of secrets, configuration, and logic:</p>
+        <ul>
+            <li><strong>Orchestration:</strong> LangGraph pipeline (preprocess → classify → parse) defined in <code>classification/graph.py</code>.</li>
+            <li><strong>Backend:</strong> FastAPI server exposing classification, validation, and config endpoints with interactive Swagger docs.</li>
+            <li><strong>LLM Factory:</strong> <code>llm_factory.py</code> reads <code>config.yaml</code> and instantiates the chosen provider/model at runtime.</li>
+            <li><strong>Config Layer:</strong> <code>.env</code> holds secrets (API keys, host/port, CORS); <code>config.yaml</code> holds models, categories, colors, and confidence thresholds; <code>config.py</code> unifies them into a single settings object.</li>
+            <li><strong>Schemas:</strong> Pydantic request/response models in <code>models.py</code> for strict validation.</li>
+            <li><strong>Prompts:</strong> Classification logic and templates centralized in <code>classification/prompts.py</code>.</li>
+        </ul>
+
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><strong>POST /classify:</strong> Classify a ticket from a JSON body.</li>
+            <li><strong>POST /classify-upload:</strong> Classify with a file/screenshot upload (multipart).</li>
+            <li><strong>POST /validate-key:</strong> Validate an API key to enable chat.</li>
+            <li><strong>GET /providers:</strong> List available LLM providers and models from config.</li>
+            <li><strong>GET /categories:</strong> Classification categories with badge colors and routing targets.</li>
+            <li><strong>GET /config:</strong> Non-sensitive configuration (no API keys exposed).</li>
+            <li><strong>GET /health:</strong> Health check. <strong>GET /docs:</strong> Interactive Swagger UI.</li>
+        </ul>
+
+        <h2>Classification Flow</h2>
+        <ul>
+            <li><strong>1. Provider selection:</strong> Frontend loads providers from <code>/providers</code> and pre-detects which keys are configured in <code>.env</code>.</li>
+            <li><strong>2. Key validation:</strong> A user-entered key (or the <code>.env</code> fallback) is validated via <code>/validate-key</code> before chat is enabled.</li>
+            <li><strong>3. Classify:</strong> The ticket message (plus an optional screenshot) is sent to <code>/classify</code> with the chosen provider and model.</li>
+            <li><strong>4. Route &amp; display:</strong> The returned category, confidence, and routing target are rendered as a colored badge pulled from <code>/categories</code>.</li>
+        </ul>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li><strong>Orchestration:</strong> LangGraph</li>
+            <li><strong>Backend:</strong> FastAPI (Python 3.11)</li>
+            <li><strong>LLM Providers:</strong> OpenAI, Anthropic Claude, Google Gemini (Gemini 2.5 Flash default)</li>
+            <li><strong>Architecture:</strong> Model Context Protocol (MCP)</li>
+            <li><strong>Validation:</strong> Pydantic</li>
+            <li><strong>Config:</strong> YAML + dotenv unified settings</li>
+            <li><strong>Docs:</strong> Swagger / OpenAPI</li>
+        </ul>
+
+        <h2>Business Impact</h2>
+        <ul>
+            <li>Automated ticket triage that routes to the correct team in seconds instead of manual review</li>
+            <li>Confidence thresholds prevent silent misroutes by escalating uncertain cases to humans</li>
+            <li>Config-driven categories and routing let support leads tune behavior without engineering</li>
+            <li>Provider-agnostic design avoids vendor lock-in and enables cost/latency tuning per model</li>
+        </ul>
+
+        <h2>Roadmap (Post-POC)</h2>
+        <ul>
+            <li>Add RAG with a Pinecone/Chroma vector DB over product manuals for grounded answers</li>
+            <li>Module 2 — Database Investigator MCP Server</li>
+            <li>Module 3 — Log Analysis MCP Server</li>
+            <li>Feedback loop — thumbs up/down signals for continuous retraining</li>
+        </ul>
+
+        <span>View the project on GitHub:</span>
+        <br>
+        <button id="github-btn" onclick="window.open('https://github.com/Ganlak', '_blank')">View on GitHub</button>
+    </div>
+</body>
+</html>
